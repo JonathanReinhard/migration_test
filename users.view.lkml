@@ -44,7 +44,7 @@ view: users {
 
   dimension: first_name {
     type: string
-    sql: ${TABLE}.first_name ;;
+    sql: CONCAT('His Majesty ',${TABLE}.first_name) ;;
   }
 
   dimension: gender {
