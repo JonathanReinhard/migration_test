@@ -54,7 +54,7 @@ view: users {
 
   dimension: last_name {
     type: string
-    sql: CONCAT(${TABLE}.last_name,' TheTHIRD' ;;
+    sql: CONCAT(${TABLE}.last_name,' TheTHIRD') ;;
   }
 
   dimension: full_name{
