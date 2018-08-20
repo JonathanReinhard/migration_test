@@ -5,7 +5,7 @@ include: "*.view"
 
 # include all the dashboards
 include: "*.dashboard"
-include: "*.dashboard.lkml"
+#include: "*.dashboard.lkml"
 
 datagroup: sso_curriculum_test_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;

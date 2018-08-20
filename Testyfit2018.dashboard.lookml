@@ -1,6 +1,13 @@
 - dashboard: testyfit2018
   title: testyfit2018
   layout: newspaper
+  embed_style:
+    background_color: "#da4ab6"
+    show_title: true
+    title_color: "#228ab1"
+    show_filters_bar: true
+    tile_text_color: "#0e2027"
+    text_tile_text_color: ''
   elements:
   - title: test_embed
     name: test_embed
