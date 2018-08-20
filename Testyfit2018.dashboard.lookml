@@ -5,7 +5,7 @@
     background_color: "#da4ab6"
     show_title: true
     title_color: "#228ab1"
-    show_filters_bar: true
+    show_filters_bar: false
     tile_text_color: "#0e2027"
     text_tile_text_color: ''
   elements:
