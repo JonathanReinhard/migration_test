@@ -24,7 +24,7 @@ view: products {
 
   dimension: item_name {
     type: string
-    sql: ${TABLE}.item_name ;;
+    sql: CONCAT("-",${TABLE}.item_name) ;;
   }
 
   dimension: rank {

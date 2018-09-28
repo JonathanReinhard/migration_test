@@ -42,4 +42,9 @@ view: order_items {
     type: count
     drill_fields: [id, inventory_items.id, orders.id]
   }
+  measure: average_sales_price {
+    type: average
+    sql: ${sale_price} ;;
+    value_format_name: decimal_0
+  }
 }

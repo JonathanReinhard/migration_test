@@ -14,6 +14,8 @@ datagroup: sso_curriculum_test_default_datagroup {
 
 persist_with: sso_curriculum_test_default_datagroup
 
+explore: sql_runner_query {}
+
 explore: events {
   join: users {
     type: left_outer
