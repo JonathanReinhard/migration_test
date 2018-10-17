@@ -17,7 +17,7 @@ view: sql_runner_query {
 
   dimension: products_category {
     type: string
-    sql: ${TABLE}.`products.category` ;;
+    sql: CONCAT("_",${TABLE}.`products.category`) ;;
   }
 
   dimension: products_item_name {

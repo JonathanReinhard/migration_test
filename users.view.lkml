@@ -62,6 +62,11 @@ view: users {
     sql: CONCAT(${first_name},' NOT THE REAL NAME ',${last_name}) ;;
   }
 
+  dimension: other_name {
+    type: string
+    sql: Replace(${full_name},"NOT"," ") ;;
+  }
+
   dimension: state {
     type: string
     sql: ${TABLE}.state ;;
