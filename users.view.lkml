@@ -1,9 +1,10 @@
 view: users {
   sql_table_name: demo_db.users ;;
 
-  dimension: id {
+  dimension: user_id {
     primary_key: yes
     type: number
+    tags: ["email","id", "full_name"]
     sql: ${TABLE}.id ;;
   }
 
@@ -39,7 +40,14 @@ view: users {
 
   dimension: email {
     type: string
+    tags: ["email"]
     sql: ${TABLE}.email ;;
+  }
+
+  measure: testing_m {
+    tags: ["email", "user_id"]
+    type: number
+    sql: 1 ;;
   }
 
   dimension: first_name {
@@ -73,6 +81,7 @@ view: users {
   }
 
   measure: count {
+    tags: ["email","id", "full_name"]
     type: count
     drill_fields: [detail*]
   }
@@ -80,7 +89,7 @@ view: users {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-      id,
+      user_id,
       first_name,
       last_name,
       events.count,
