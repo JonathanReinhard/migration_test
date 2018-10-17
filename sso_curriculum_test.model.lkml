@@ -21,7 +21,7 @@ explore: sql_runner_query {}
 explore: events {
   join: users {
     type: left_outer
-    sql_on: ${events.user_id} = ${users.id} ;;
+    sql_on: ${events.user_id} = ${users.user_id} ;;
     relationship: many_to_one
   }
 }
@@ -55,7 +55,7 @@ explore: order_items {
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders.user_id} = ${users.user_id}id} ;;
     relationship: many_to_one
   }
 }
@@ -63,7 +63,7 @@ explore: order_items {
 explore: orders {
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders.user_id} = ${users.user_id}id} ;;
     relationship: many_to_one
   }
 }
@@ -75,7 +75,7 @@ explore: schema_migrations {}
 explore: user_data {
   join: users {
     type: left_outer
-    sql_on: ${user_data.user_id} = ${users.id} ;;
+    sql_on: ${user_data.user_id} = ${users.user_id}id} ;;
     relationship: many_to_one
   }
 }
