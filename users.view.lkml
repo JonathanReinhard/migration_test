@@ -7,6 +7,7 @@ view: users {
     tags: ["email","id", "full_name"]
     sql: ${TABLE}.id ;;
   }
+  ###
 
   dimension: age {
     type: number
