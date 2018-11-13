@@ -24,6 +24,23 @@ view: orders {
     convert_tz: no
   }
 
+#   dimension: in_the_last_60_days {
+#     type: yesno
+#     sql: ${created_date}> ADDDATE(DATE(NOW()), -60)  ;;
+#   }
+#
+#   dimension: in_the_last_60_daysly {
+#     type: yesno
+#     sql: ADDDATE(DATE(NOW()), INTERVAL -1 YEAR) > ${created_date} AND ${created_date} > ADDDATE(ADDDATE(DATE(NOW()), INTERVAL -1 YEAR),-60)  ;;
+#   }
+
+  dimension: in_the_last_60_days {
+    type: yesno
+    sql:  ${created_date}> ADDDATE(DATE(NOW()), -60) OR (ADDDATE(DATE(NOW()), INTERVAL -1 YEAR) > ${created_date} AND ${created_date} > ADDDATE(ADDDATE(DATE(NOW()), INTERVAL -1 YEAR),-60))  ;;
+  }
+
+
+
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
