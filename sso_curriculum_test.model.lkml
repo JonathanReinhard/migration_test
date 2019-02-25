@@ -1,5 +1,7 @@
 connection: "thelook"
 
+include: "//project_import_test/*.view.lkml"
+
 # include all the views
 include: "*.view"
 
@@ -60,8 +62,15 @@ explore: order_items {
   }
 }
 
+# access_grant: can_view {
+#   user_attribute: test
+#   allowed_values:["Test"]
+#   }
+
 explore: orders {
+
   join: users {
+    # required_access_grants: [can_view]
     type: left_outer
     sql_on: ${orders.user_id} = ${users.user_id}id} ;;
     relationship: many_to_one

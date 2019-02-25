@@ -24,6 +24,20 @@ view: orders {
     convert_tz: no
   }
 
+ measure: yesno_date{
+   type: yesno
+  sql: max(${created_raw}) ;;
+ }
+
+# measure: second_max {
+#   type: max
+#   sql: max(${created_raw}) ;;
+#   filters: {
+#     field: yesno_date
+#     value: "yes"
+#   }
+# }
+
 #   dimension: in_the_last_60_days {
 #     type: yesno
 #     sql: ${created_date}> ADDDATE(DATE(NOW()), -60)  ;;

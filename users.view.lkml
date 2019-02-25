@@ -1,6 +1,7 @@
 view: users {
   sql_table_name: demo_db.users ;;
 
+
   dimension: user_id {
     primary_key: yes
     type: number
