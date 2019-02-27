@@ -1,7 +1,7 @@
 connection: "thelook"
 
-include: "//project_import_test/*.view.lkml"
-
+# #include: "//project_import_test/*.view.lkml"
+# include: "//project_import_test/*"
 # include all the views
 include: "*.view"
 
@@ -14,9 +14,12 @@ datagroup: sso_curriculum_test_default_datagroup {
   max_cache_age: "2 hour"
 }
 
+#explore: stations {}
 persist_with: sso_curriculum_test_default_datagroup
 
-explore: test {}
+# explore: test {
+#   extends: [stations]
+#   }
 
 explore: sql_runner_query {}
 
@@ -72,7 +75,7 @@ explore: orders {
   join: users {
     # required_access_grants: [can_view]
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.user_id}id} ;;
+    sql_on: ${orders.user_id} = ${users.user_id} ;;
     relationship: many_to_one
   }
 }
