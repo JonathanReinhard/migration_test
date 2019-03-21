@@ -11,6 +11,7 @@ view: users {
   ###
 
   dimension: age {
+    required_access_grants: [can_view]
     type: number
     sql: ${TABLE}.age ;;
   }

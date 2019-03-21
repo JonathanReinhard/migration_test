@@ -65,13 +65,13 @@ explore: order_items {
   }
 }
 
-# access_grant: can_view {
-#   user_attribute: test
-#   allowed_values:["Test"]
-#   }
+access_grant: can_view {
+  user_attribute: sara_test_chat
+  allowed_values:["Test"]
+  }
 
 explore: orders {
-
+  required_access_grants: [can_view]
   join: users {
     # required_access_grants: [can_view]
     type: left_outer
