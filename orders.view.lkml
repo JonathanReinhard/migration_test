@@ -27,7 +27,7 @@ view: orders {
   dimension: test_img {
     type: number
     sql: 1;;
-    html: <img src="https://www.sothebys.com/content/dam/stb/lots/HK0/HK0912/052HK0912_B4WSD.jpg" width="80%" height="80%"> ;;
+    html: <img src="https://www.sothebys.com/content/dam/stb/lots/HK0/HK0912/052HK0912_B4WSD.jpg" width="25%" height="25%"> ;;
   }
 
  measure: yesno_date{
