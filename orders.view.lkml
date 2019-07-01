@@ -25,15 +25,15 @@ view: orders {
   }
 
   dimension: test_img {
-    type: number
-    sql: 1;;
+    type: string
+    sql: "1";;
     html: <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Wikidata_Map_July_2017_Huge.png"> ;;
 
   }
 
   dimension: test_img2 {
-    type: number
-    sql: 2;;
+    type: string
+    sql: "2";;
     html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wikidata_Map_July_2017_Huge.png/800px-Wikidata_Map_July_2017_Huge.png"> ;;
   }
 
