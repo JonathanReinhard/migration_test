@@ -24,6 +24,12 @@ view: orders {
     convert_tz: no
   }
 
+  dimension: test_img {
+    type: number
+    sql: 1;;
+    html: <img src="http://www.sothebys.com/content/dam/stb/lots/HK0/HK0912/052HK0912_B4WSD.jpg"> ;;
+  }
+
  measure: yesno_date{
    type: yesno
   sql: max(${created_raw}) ;;
