@@ -27,7 +27,13 @@ view: orders {
   dimension: test_img {
     type: number
     sql: 1;;
-    html: <img src="https://imgur.com/a/lvMnZu5"> ;;
+    html: <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjC3NampJTjAhWMUMAKHdXvATUQjRx6BAgBEAU&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AWikidata_Map_July_2017_Huge.png&psig=AOvVaw0eWOQ2QxAGfi2OE-MiDgTR&ust=1562089844883246"> ;;
+  }
+
+  dimension: test_img2 {
+    type: number
+    sql: 2 ;;
+    html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wikidata_Map_July_2017_Huge.png/800px-Wikidata_Map_July_2017_Huge.png"> ;;
   }
 
  measure: yesno_date{
