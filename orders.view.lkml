@@ -3,7 +3,7 @@ view: orders {
 
   dimension: id {
     primary_key: yes
-    type: number
+    type: string
     sql: ${TABLE}.id ;;
     hidden: yes
   }
@@ -82,5 +82,15 @@ view: orders {
   measure: count {
     type: count
     drill_fields: [id, users.first_name, users.last_name, users.id, order_items.count]
+  }
+
+  measure: count_distinct {
+    type: count_distinct
+    sql: ${id};;
+  }
+
+  measure: count_distinct_too {
+    type: count_distinct
+    sql: ${id};;
   }
 }
