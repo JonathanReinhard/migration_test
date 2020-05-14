@@ -1,6 +1,13 @@
 - dashboard: gna_test_embed
   title: Gna_test_embed
   layout: newspaper
+  embed_style:
+    background_color: "#fff"
+    show_title: true
+    title_color: "#282828"
+    show_filters_bar: true
+    tile_text_color: "#282828"
+    text_tile_text_color: "#F7F7EF"
   elements:
   - title: test_embed
     name: test_embed
@@ -8,7 +15,6 @@
     explore: orders
     type: table
     fields: [orders.count, orders.status]
-    filters: {}
     sorts: [orders.count desc]
     limit: 500
     query_timezone: America/Los_Angeles
